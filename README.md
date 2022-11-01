@@ -124,7 +124,7 @@ sudo chmod u+w $HOME/.config/libvirt/win10.nvram
 
 If all has gone well, your Windows should now boot 😊
 
-## Clean up
+## Clean up (necessary)
 
 1. Right click the Start Menu > Device Manager
 2. View menu > Show hidden devices
@@ -137,3 +137,7 @@ If all has gone well, your Windows should now boot 😊
 9. Shutdown
 10. Click Boot Order > Disable "Show boot menu"
 11. Select the NIC > Change the model to virtio
+
+## For the next steps and how to do VFIO passthrough, see
+
+https://asus-linux.org/wiki/vfio-guide/
