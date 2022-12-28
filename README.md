@@ -31,9 +31,8 @@ So far, I think the risks are:
 
 ## Todo:
 
-1. Restrict access to other partitions in Windows (via group policy?)
-2. Add warning to NOT install the Btrfs driver into Windows
-3. Test booting raw Windows still works
+1. Use a loop device to access the Windows partition rather than accessing directly
+2. Fix booting between virtualised and raw Windows
 
 # Procedure
 
@@ -55,8 +54,8 @@ sudo cat /sys/firmware/acpi/tables/MSDM > msdm.bin
 
 ```bash
 cd ~/.local/share/libvirt
-sudo dmidecode -t 0 -u > smbios0.txt
-sudo dmidecode -t 1 -u > smbios1.txt
+sudo dmidecode -t 0 > smbios0.txt
+sudo dmidecode -t 1 > smbios1.txt
 ```
 
 _Note: I've copied these to /home because I'm exercising engineering laziness and don't need to remember to backup files in system folders 😜_
