@@ -40,7 +40,9 @@ So far, I think the risks are:
 
 1. Install KVM (virt-manager)
 
-`sudo dnf install virt-manager libvirt-client qemu-kvm-core`
+`sudo dnf install virt-manager libvirt qemu-kvm-core`
+
+_Note: You shouldn't actually need to install the full qemu package if you've installed libvirt._
 
 2. Extract the Windows Activation data from the BIOS
 
